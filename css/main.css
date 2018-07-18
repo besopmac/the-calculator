@@ -6,7 +6,7 @@
 
 body {
     background-color: #e1e1e1;
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
 }
 
 .wrapper {
@@ -21,4 +21,10 @@ body {
     width: 400px;
     color: #fff;
     background-color: #000;
+}
+
+.screen {
+    padding: .25em;
+    font-size: 3em;
+    text-align: right;
 }
