@@ -5,22 +5,30 @@
 }
 
 body {
+    margin: 0;
+    padding: 0;
     background-color: #e1e1e1;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.wrapper {
+/* .wrapper {
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 
 .calculator {
     width: 400px;
     color: #fff;
     background-color: #000;
+}
+
+.btn-calc {
+    width: 24.5%;
+    font-size: 40px;
+    border-radius: 0;
 }
 
 .screen {
