@@ -4,7 +4,7 @@ let previousOperator;
 const screen = document.querySelector('.screen');
 
 document.querySelector('.keyboard').addEventListener('click', function(event) {
-    buttonClick(event.target.value);
+    buttonClick(event.target.innerText);
 });
 
 function buttonClick(value) {
@@ -25,7 +25,31 @@ function handleNumber(value) {
 }
 
 function handleSymbol(value) {
-    
+    switch (value) {
+        case 'C':
+            buffer = '0';
+            runningTotal = 0;
+            break;
+        case '=':
+            if (previousOperator === null) {
+                return;
+            }
+            flushOperation(parseInt(buffer));
+            previousOperator = null;
+            buffer = "" + runningTotal;
+            runningTotal = 0;
+            break;
+        case '←':
+            if (buffer.length === 1) {
+                buffer = 0;
+            } else {
+                buffer = buffer.substring(0, buffer.length - 1);
+            }
+            break;
+        default:
+            handleMath(value);
+            break;
+    }
 }
 
 function rerender() {
